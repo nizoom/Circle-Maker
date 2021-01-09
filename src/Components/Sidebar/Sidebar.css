@@ -1,0 +1,105 @@
+.sidebar{
+  border-radius: 0px 30px 30px;
+  height : 100%;
+  width : 200px;
+  position: fixed;
+  z-index: 1;
+  top : 0;
+  left : 0;
+  background-color: #6B7797;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.sidebar button {
+  margin: 5px;
+  padding: 8px 8px 8px  32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  color: #f1f1f1;
+}
+
+.close {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    color: transparent;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 90px;
+    outline: none;
+    overflow: hidden;
+    padding: 10px 0 0;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in;
+    width: 100px;
+  }
+
+  .close::before,
+  .close::after {
+    background-color: white;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform-origin: center left;
+    transition: all 0.2s ease-in;
+    width: 141.4214px;
+    z-index: -1;
+  }
+
+  .close::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .close::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  .close:hover {
+    color: #8A2387;
+  }
+
+  .close:hover::before,
+  .close:hover::after {
+    height: 50px;
+    transform: rotate(0deg);
+  }
+
+
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  background-color:#44c767;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#9c4c9c;
+  font-family:Arial;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #0e16b3;
+}

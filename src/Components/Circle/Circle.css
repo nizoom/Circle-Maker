@@ -1,0 +1,21 @@
+.circleDiv{
+
+  border-color: gray;
+  border-radius: 50%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+  justify-items: center;
+
+}
+
+.circleDiv span {
+
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+  background-color: #6666ff;
+  border-radius: 50%;
+  display: inline-block;
+}
