@@ -18,7 +18,7 @@ const sideBar = ( props ) => {
     <div>
       <div className = { `classes ${props.status ? "sidebar" : "hidden"} `}>
         <nav>
-        <button className = "close" onClick = {props.onClick}> - </button>
+        <button className = "close" onClick = {props.onClick}>.</button>
         <button >  About </button>
         <button > Contact Us </button>
         <button> Support </button>

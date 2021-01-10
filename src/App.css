@@ -51,7 +51,7 @@
     padding: 10px 0 0;
     text-transform: uppercase;
     transform: translate(-50%, -50%);
-    transition: all 0.1s ease-in;
+    transition: all 0.2s ease-in;
     width: 100px;
   }
 
