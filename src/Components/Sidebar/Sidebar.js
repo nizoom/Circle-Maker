@@ -1,20 +1,11 @@
 import React, { Component } from "react";
 import classes from "./Sidebar.css";
 
-class sideBar extends Component {
-
-  state = {
-    isBoxVisible : false
-    }
+const sideBar = ( props ) => {
 
 
-  clickHandler = ( ) => {
-    this.setState(prevstate => ({
-      isBoxVisible : !prevstate.isBoxVisible }))
-    console.log(this.state.isBoxVisible);
-  }
 
-  getClassName = ( ) => {
+  const getClassName = ( props ) => {
     if (this.state.isBoxVisible ){
       return classes.sidebar;
     } else {
@@ -22,20 +13,12 @@ class sideBar extends Component {
     }
   }
 
-  closeHandler = (  ) => {
-      this.setState({
-        isBoxVisible : false
-      })
-  }
-  render (){
-    const { isBoxVisible } = this.state;
+
   return(
     <div>
-      <button onClick = {this.clickHandler} className = "menu"
-      > Menu </button>
-      <div className = { `classes ${isBoxVisible ? "sidebar" : "hidden"} `}>
+      <div className = { `classes ${props.status ? "sidebar" : "hidden"} `}>
         <nav>
-        <button className = "close" onClick = {this.closeHandler}> - </button>
+        <button className = "close" onClick = {props.onClick}> - </button>
         <button >  About </button>
         <button > Contact Us </button>
         <button> Support </button>
@@ -47,6 +30,5 @@ class sideBar extends Component {
       </div>
     </div>
   )}
-}
 
 export default sideBar

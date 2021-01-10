@@ -1,4 +1,5 @@
 .App {
+  transition: margin-left .5s;
   text-align: center;
   padding: 20px;
   width: auto;
@@ -6,6 +7,7 @@
 }
 
 .push {
+  transition: margin-left .5s;
   text-align: center;
   padding: 20px;
   width: auto;
@@ -30,8 +32,59 @@
   text-shadow:0px 1px 0px #0e16b3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.close {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    color: transparent;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 90px;
+    outline: none;
+    overflow: hidden;
+    padding: 10px 0 0;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-in;
+    width: 100px;
   }
-}
+
+  .close::before,
+  .close::after {
+    background-color: white;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform-origin: center left;
+    transition: all .2s ease-in;
+    width: 141.4214px;
+    z-index: -1;
+  }
+
+  .close::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .close::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  .close:hover {
+    color: #8A2387;
+  }
+
+  .close:hover::before,
+  .close:hover::after {
+    height: 50px;
+    transform: rotate(0deg);
+  }
