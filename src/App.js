@@ -46,7 +46,10 @@ class App extends Component{
         <button onClick = {this.clickHandler} className = "menu"
         > Menu </button>
 
-        <Sidebar clicked = {this.state.isBoxVisible}/>
+        <Sidebar
+        status = {this.state.isBoxVisible}
+        onClick = {this.clickHandler}/>
+
       </div>
     );
 
